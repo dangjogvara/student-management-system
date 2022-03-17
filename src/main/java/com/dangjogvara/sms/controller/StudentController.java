@@ -25,10 +25,11 @@ public class StudentController {
 
     @GetMapping("/students/new")
     public String createStudentForm(Model model) {
-        Student student = new Student();
         model.addAttribute("student", student);
         return "create_student";
     }
+
+    Student student = new Student();
 
     @PostMapping("/students")
     public String saveStudent(@ModelAttribute("student") Student student) {
