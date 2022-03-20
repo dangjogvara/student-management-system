@@ -60,6 +60,7 @@
                 </thead>
                 <tbody>
                 <tr th:each="student: ${students}">
+                    <td th:text="${student.firstName}"></td>
                     <td th:text="${student.lastName}"></td>
                     <td th:text="${student.email}"></td>
                     <td>
